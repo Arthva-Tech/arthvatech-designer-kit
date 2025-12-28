@@ -44,6 +44,8 @@ const Header = () => {
             <img
               src={logo}
               alt="Arthvatech Logo"
+              loading="eager"
+              fetchPriority="high"
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
