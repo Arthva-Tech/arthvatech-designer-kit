@@ -33,6 +33,8 @@ const LoadingScreen = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
           <img
             src="/favicon.png"
             alt="Loading"
+            loading="eager"
+            fetchPriority="high"
             className="absolute inset-0 m-auto w-10 h-10 md:w-12 md:h-12 object-contain"
           />
         </div>
