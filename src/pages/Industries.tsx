@@ -104,57 +104,6 @@ const Industries = () => {
         </div>
       </section>
 
-      {/* Why Industry Expertise Matters */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <AnimatedSection>
-              <span className="text-primary font-medium text-sm uppercase tracking-wider">Domain Expertise</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-3 mb-6">
-                Why Industry Knowledge Matters
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Technology solutions that truly work require more than technical expertise. 
-                  They demand a deep understanding of industry-specific workflows, regulations, 
-                  and customer expectations.
-                </p>
-                <p>
-                  At Arthvatech, we invest time in understanding your industry's nuances. This enables 
-                  us to anticipate challenges, incorporate best practices, and deliver solutions that 
-                  feel purpose-built for your sector.
-                </p>
-                <p>
-                  From healthcare compliance requirements to fintech security standards, we bring the 
-                  domain knowledge needed to create solutions that meet industry standards while exceeding 
-                  your expectations.
-                </p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={200}>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { value: "8+", label: "Industries Served" },
-                  { value: "100+", label: "Sector Projects" },
-                  { value: "50+", label: "Domain Experts" },
-                  { value: "99%", label: "Compliance Rate" },
-                ].map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="bg-card rounded-xl p-6 border border-border text-center hover-lift"
-                  >
-                    <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="section-padding bg-background">
