@@ -4,19 +4,21 @@ const LoadingScreen = ({ onLoadComplete }: { onLoadComplete: () => void }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => {
+    const handleReady = () => {
       setTimeout(() => {
         setIsVisible(false);
         setTimeout(onLoadComplete, 300);
-      }, 500);
+      }, 200);
     };
 
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
+    // "interactive" (DOMContentLoaded) is much earlier than "complete" (all assets loaded)
+    if (document.readyState !== "loading") {
+      handleReady();
+      return;
     }
+
+    window.addEventListener("DOMContentLoaded", handleReady);
+    return () => window.removeEventListener("DOMContentLoaded", handleReady);
   }, [onLoadComplete]);
 
   if (!isVisible) return null;
